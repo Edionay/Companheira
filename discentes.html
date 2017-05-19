@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>aCompanheiro</title>
+    <title>Companheiro</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -34,18 +34,17 @@
 
         <nav class="nav col-sm-2">
             <ul class="nav nav-pills nav-stacked">
-                <li role="presentation" class="active"><a href="index.html">Tarefas</a></li>
-                <li role="presentation"><a href="discentes.html">Discentes</a></li>
+                <li role="presentation"><a href="tarefas.html">Tarefas</a></li>
+                <li role="presentation" class="active"><a href="discentes.html">Discentes</a></li>
                 <li role="presentation"><a href="#">Relatórios</a></li>
             </ul>
         </nav>
 
         <div class="col-sm-10">
 
+            <button data-toggle="collapse" class="btn btn-primary" data-target="#novo_discente">Novo discente</button>
 
-        <div id="demo" class="collapse">
-
-
+            <div id="novo_discente" class="collapse">
 
                 <form class="col-sm-8">
 
@@ -103,7 +102,7 @@
                 </form>
 
             </div>
-            <button data-toggle="collapse" class="btn btn-primary" data-target="#demo">Novo discente</button>
+
             <table class="table table-striped">
                 <thead>
                 <tr>
