@@ -48,59 +48,92 @@
 
                 <form class="col-sm-8">
 
-                    <div class="form-group">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                        <label for="nome_completo">Nome completo</label>
-                        <input type="text" class="form-control" id="nome_completo">
-                    </div>
-
                     <div class="form-group row">
-                        <div class="col-sm-4">
-                            <span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
-                            <label>Matrícula</label>
-                            <input type="text" class="form-control" id="matricula">
+
+
+                        <div class="form-group">
+                            <label for="nome_do_discente" class="control-label">Nome completo</label>
+                            <div class="cols-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user-circle fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="nome_do_discente" id="nome_do_discente"
+                                           placeholder="digite o nome completo do discente"/>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="col-sm-8">
-                            <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-                            <label>Curso</label>
-                            <input type="text" class="form-control" id="curso">
+                        <div class="form-group">
+                            <label for="matricula" class="control-label">Matrícula</label>
+                            <div class="cols-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="matricula" id="matricula"
+                                           placeholder="digite número da matrícula do discente"/>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="curso" class="control-label">Curso</label>
+                            <div class="cols-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-graduation-cap fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="curso" id="curso"
+                                           placeholder="digite o curso do discente"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="control-label">E-mail</label>
+                            <div class="cols-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           placeholder="digite o e-mail do discente"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+
+                            <div class="form-group col-md-6">
+                                <label for="telefone_1" class="control-label">Telefone 1</label>
+                                <div class="cols-md-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="telefone_1" id="telefone_1"
+                                               placeholder="digite o curso do discente"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="telefone_2" class=" control-label">Telefone 2</label>
+                                <div class="cols-md-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="telefone_2" id="telefone_2"
+                                               placeholder="digite o curso do discente"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        </div>
+
+
+
+
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
                     </div>
 
-                    <div class="form-group">
-                        <label>NEE</label>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"><i class="fa fa-low-vision" aria-hidden="true"></i> Baixa visão
-                            </label>
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                            <label>Telefone 1</label>
-                            <input type="tel" class="form-control" id="telefone1">
-                        </div>
-
-                        <div class="col-sm-6">
-                            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-                            <label>Telefone 2</label>
-                            <input type="tel" class="form-control" id="telefone2">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
 
                 </form>
-
             </div>
 
             <table class="table table-striped">
