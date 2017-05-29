@@ -49,7 +49,6 @@
                     <div class="form-group row">
 
 
-
                         <div class="form-group row">
 
 
@@ -57,9 +56,11 @@
                                 <label for="busca-por-matricula" class="control-label">Matrícula</label>
                                 <div class="cols-md-10">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" name="busca-por-matricula" id="busca-por-matricula"
+                                        <input type="text" class="form-control" name="busca-por-matricula"
+                                               id="busca-por-matricula"
                                                placeholder="digite a matrícula"/>
-                                        <span class="input-group-addon"><i class="fa fa-search fa" aria-hidden="true"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-search fa"
+                                                                           aria-hidden="true"></i></span>
 
                                     </div>
                                 </div>
@@ -69,8 +70,10 @@
                                 <label for="discente_encontrado" class=" control-label">&nbsp;</label>
                                 <div class="cols-md-10">
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user-circle fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="discente_encontrado" id="discente_encontrado"
+                                        <span class="input-group-addon"><i class="fa fa-user-circle fa"
+                                                                           aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="discente_encontrado"
+                                               id="discente_encontrado"
                                                placeholder="o discente encontrado aparecerá aqui" disabled/>
                                     </div>
                                 </div>
@@ -80,7 +83,8 @@
                             <label for="titulo" class="control-label">Título do texto</label>
                             <div class="cols-md-10">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+                                    <span class="input-group-addon"><i class="fa fa-book fa"
+                                                                       aria-hidden="true"></i></span>
                                     <input type="text" class="form-control" name="titulo" id="titulo"
                                            placeholder="digite o título do livro"/>
                                 </div>
@@ -104,10 +108,9 @@
                     </div>
 
 
-
                 </form>
             </div>
-            <table class="table table-striped">
+            <table class="table table-striped" id="tabela-de-tarefas">
 
                 <thead>
 
@@ -123,74 +126,269 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr id="l01">
                     <td>Alfabetização Fônica Computadorizada</td>
                     <td>Tálita Serafim</td>
                     <td>16/03/2017</td>
                     <td>01/05/2017</td>
-                    <td>Não definido</td>
+                    <td>Pablo</td>
                     <td>Atrasado</td>
                     <td>
                         <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Alfabetização Fônica Computadorizada</td>
-                    <td>Tálita Serafim</td>
-                    <td>16/03/2017</td>
-                    <td>01/05/2017</td>
-                    <td>Edionay</td>
-                    <td>Atrasado</td>
-                    <td>
-                        <div class="btn-toolbar" role="toolbar">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l01')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </td>
 
                 </tr>
-                <tr>
+                <tr id="l02">
                     <td>Alfabetização Fônica Computadorizada</td>
                     <td>Tálita Serafim</td>
                     <td>16/03/2017</td>
                     <td>01/05/2017</td>
-                    <td>Edionay</td>
+                    <td>Pablo</td>
                     <td>Atrasado</td>
                     <td>
                         <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l02')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </td>
+
                 </tr>
-                <tr>
+                <tr id="l03">
                     <td>Alfabetização Fônica Computadorizada</td>
                     <td>Tálita Serafim</td>
                     <td>16/03/2017</td>
                     <td>01/05/2017</td>
-                    <td>Edionay</td>
+                    <td>Pablo</td>
                     <td>Atrasado</td>
                     <td>
                         <div class="btn-toolbar" role="toolbar">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l03')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </td>
+
+                </tr>
+                <tr id="l04">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l04')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l05">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l05')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l06">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l06')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l07">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l07')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l08">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l08')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l09">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l09')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l10">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l10')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="l11">
+                    <td>Alfabetização Fônica Computadorizada</td>
+                    <td>Tálita Serafim</td>
+                    <td>16/03/2017</td>
+                    <td>01/05/2017</td>
+                    <td>Pablo</td>
+                    <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default"
+                                        title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Excluir" aria-label="Apagar"
+                                        onclick="return botaoExcluirClicado('l11')"><i class="fa fa-trash fa"
+                                                                                       aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" title="Assumir tarefa"
+                                        aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa"
+                                                                       aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
                 </tr>
                 </tbody>
 
