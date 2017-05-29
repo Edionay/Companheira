@@ -35,6 +35,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <li role="presentation" class="active"><a href="tarefas.html">Tarefas</a></li>
                 <li role="presentation"><a href="discentes.html">Discentes</a></li>
+                <li role="presentation"><a href="acompanhamentos.html">Acompanhamentos</a></li>
                 <li role="presentation"><a href="#">Relatórios</a></li>
             </ul>
         </nav>
@@ -48,17 +49,33 @@
                     <div class="form-group row">
 
 
-                        <div class="form-group">
-                            <label for="discente" class="control-label">Discente</label>
-                            <div class="cols-md-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user-circle fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="discente" id="discente"
-                                           placeholder="digite o nome do discente"/>
+
+                        <div class="form-group row">
+
+
+                            <div class="form-group col-md-4">
+                                <label for="busca-por-matricula" class="control-label">Matrícula</label>
+                                <div class="cols-md-10">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="busca-por-matricula" id="busca-por-matricula"
+                                               placeholder="digite a matrícula"/>
+                                        <span class="input-group-addon"><i class="fa fa-search fa" aria-hidden="true"></i></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="discente_encontrado" class=" control-label">&nbsp;</label>
+                                <div class="cols-md-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user-circle fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="discente_encontrado" id="discente_encontrado"
+                                               placeholder="o discente encontrado aparecerá aqui" disabled/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="titulo" class="control-label">Título do texto</label>
                             <div class="cols-md-10">
@@ -102,6 +119,7 @@
                     <th>Prazo</th>
                     <th>Responsável</th>
                     <th>Estado</th>
+                    <th>Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -110,8 +128,17 @@
                     <td>Tálita Serafim</td>
                     <td>16/03/2017</td>
                     <td>01/05/2017</td>
-                    <td>Edionay</td>
+                    <td>Não definido</td>
                     <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Alfabetização Fônica Computadorizada</td>
@@ -120,6 +147,16 @@
                     <td>01/05/2017</td>
                     <td>Edionay</td>
                     <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
+
                 </tr>
                 <tr>
                     <td>Alfabetização Fônica Computadorizada</td>
@@ -128,6 +165,15 @@
                     <td>01/05/2017</td>
                     <td>Edionay</td>
                     <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Alfabetização Fônica Computadorizada</td>
@@ -136,6 +182,15 @@
                     <td>01/05/2017</td>
                     <td>Edionay</td>
                     <td>Atrasado</td>
+                    <td>
+                        <div class="btn-toolbar" role="toolbar">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Detalhes" aria-label="Mais detalhes"><i class="fa fa-eye fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Excluir" aria-label="Apagar"><i class="fa fa-trash fa" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Assumir tarefa" aria-label="Assumir tarefa"><i class="fa fa-hand-rock-o fa" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
 
@@ -152,6 +207,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="javascript.js"></script>
 
 </body>
 </html>
