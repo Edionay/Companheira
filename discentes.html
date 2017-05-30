@@ -129,7 +129,7 @@
 
 
 
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="button" onclick="return incluirDiscente()" class="btn btn-primary">Cadastrar</button>
 
                     </div>
 
@@ -138,8 +138,7 @@
                 </form>
             </div>
 
-            <table class="table table-striped">
-                <thead>
+            <table class="table table-striped" id="tabela-de-discentes">
                 <tr>
                     <th>Nome</th>
                     <th>Matrícula</th>
@@ -149,8 +148,6 @@
                     <th>Telefone 2</th>
                     <th>Ações</th>
                 </tr>
-                </thead>
-                <tbody>
 
                 <tr>
                     <td>Edionay Aguiar</td>
@@ -221,7 +218,6 @@
                     </td>
                 </tr>
 
-                </tbody>
 
 
             </table>
@@ -234,5 +230,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="javascript.js"></script>
+
 </body>
 </html>
