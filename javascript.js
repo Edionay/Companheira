@@ -2,6 +2,16 @@
  * Created by edion on 28/05/2017.
  */
 
+$( document ).ready(function(){
+    $(".button-collapse").sideNav();
+    $('.modal').modal();
+});
+
+$('.button-collapse').sideNav({
+        menuWidth: 200
+}// Default is 300
+);
+
 
 function botaoExcluirClicado(idDaLinha) {
     const tabelaDeTarefas = document.getElementById("tabela-de-tarefas");
@@ -40,8 +50,6 @@ function incluirDiscente() {
     campo4.appendChild(document.createTextNode(email.value));
     campo5.appendChild(document.createTextNode(telefone1.value));
     campo6.appendChild(document.createTextNode(telefone2.value));
-
-
 
 }
 
