@@ -14,7 +14,7 @@ function botaoExcluirClicado(idDaLinha) {
 function incluirDiscente() {
     // Get a reference to the table
     let tabelaDeDiscentes = document.getElementById("tabela-de-discentes");
-    let nome = document.getElementById("nome_do_discente").innerText;
+    let nome = document.getElementById("nome_do_discente");
     let matricula = document.getElementById("matricula");
     let curso = document.getElementById("curso");
     let email = document.getElementById("email");
@@ -26,11 +26,21 @@ function incluirDiscente() {
 
     // Insert a cell in the row at index 0
     let campo1 = novoDiscente.insertCell(0);
+    let campo2 = novoDiscente.insertCell(0);
+    let campo3 = novoDiscente.insertCell(0);
+    let campo4 = novoDiscente.insertCell(0);
+    let campo5 = novoDiscente.insertCell(0);
+    let campo6 = novoDiscente.insertCell(0);
 
 
     // Append a text node to the cell
-    let teste = document.createTextNode(nome);
-    campo1.appendChild(teste);
+    campo1.appendChild(document.createTextNode(nome.value));
+    campo2.appendChild(document.createTextNode(matricula.value));
+    campo3.appendChild(document.createTextNode(curso.value));
+    campo4.appendChild(document.createTextNode(email.value));
+    campo5.appendChild(document.createTextNode(telefone1.value));
+    campo6.appendChild(document.createTextNode(telefone2.value));
+
 
 
 }
