@@ -5,12 +5,13 @@
 $( document ).ready(function(){
     $(".button-collapse").sideNav();
     $('.modal').modal();
+    $('ul.tabs').tabs();
+    $('.tooltipped').tooltip({delay: 50});
 });
 
 $('.button-collapse').sideNav({
-        menuWidth: 200
-}// Default is 300
-);
+        menuWidth: 210
+});
 
 
 function botaoExcluirClicado(idDaLinha) {
