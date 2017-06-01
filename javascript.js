@@ -13,7 +13,6 @@ $('.button-collapse').sideNav({
         menuWidth: 210
 });
 
-
 function excluirTarefa(idDaLinha) {
     const tabelaDeTarefas = document.getElementById("dados-de-tarefas");
     const linhaASerApagada = document.getElementById(idDaLinha);
@@ -22,23 +21,23 @@ function excluirTarefa(idDaLinha) {
     }
 }
 
-function incluirTarefa() {
+function incluirAcompanhamento() {
 
-    let tabelaDeTarefas = document.getElementById("dados-de-tarefas");
-    let nome = document.getElementById("nome_do_aluno");
-    let texto = document.getElementById("titulo");
-    let data = document.getElementById("data-solicitacao");
+    const tabelaDeTarefas = document.getElementById("dados-de-acompanhamento");
+    const nome = document.getElementById("nome_aluno");
+    const texto = document.getElementById("titulo");
+    const data = document.getElementById("data-solicitacao");
 
 
-    let novaTarefa= tabelaDeTarefas.insertRow(0);
+    const novaTarefa= tabelaDeTarefas.insertRow(0);
 
-    let campo1 = novaTarefa.insertCell();
-    let campo2 = novaTarefa.insertCell();
-    let campo3 = novaTarefa.insertCell();
-    let campo4 = novaTarefa.insertCell();
-    let campo5 = novaTarefa.insertCell();
-    let campo6 = novaTarefa.insertCell();
-    let campo7 = novaTarefa.insertCell();
+    const campo1 = novaTarefa.insertCell();
+    const campo2 = novaTarefa.insertCell();
+    const campo3 = novaTarefa.insertCell();
+    const campo4 = novaTarefa.insertCell();
+    const campo5 = novaTarefa.insertCell();
+    const campo6 = novaTarefa.insertCell();
+    const campo7 = novaTarefa.insertCell();
 
 
     campo1.appendChild(document.createTextNode(texto.value));
@@ -47,7 +46,7 @@ function incluirTarefa() {
     campo6.appendChild(document.createTextNode('Pendente'));
 
     const iconeDoBotaoDetalhes = document.createElement('i');
-    iconeDoBotaoDetalhes.className = "material-icons prefix";
+    iconeDoBotaoDetalhes.className = "material-icons";
     iconeDoBotaoDetalhes.innerText = "remove_red_eye";
     const botaoDetalhes = document.createElement('a');
     botaoDetalhes.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
@@ -56,45 +55,105 @@ function incluirTarefa() {
     botaoDetalhes.appendChild(iconeDoBotaoDetalhes);
 
     const iconeDoBotaoExcluir = document.createElement('i');
-    iconeDoBotaoDetalhes.className = "material-icons prefix";
-    iconeDoBotaoDetalhes.innerText = "delete";
+    iconeDoBotaoExcluir.className = "material-icons";
+    iconeDoBotaoExcluir.innerText = "delete";
     const botaoExcluir = document.createElement('a');
+    botaoExcluir.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
+    botaoExcluir.setAttribute('data-delay', '50');
+    botaoExcluir.setAttribute('data-tooltip', 'Visualizar');
+    botaoExcluir.appendChild(iconeDoBotaoExcluir);
+
+    const iconeDoBotaoAssumir = document.createElement('i');
+    iconeDoBotaoAssumir.className = "material-icons";
+    iconeDoBotaoAssumir.innerText = "pan_tool";
+    const botaoAssumir = document.createElement('a');
+    botaoAssumir.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
+    botaoAssumir.setAttribute('data-delay', '50');
+    botaoAssumir.setAttribute('data-tooltip', 'Assumir tarefa');
+    botaoAssumir.appendChild(iconeDoBotaoAssumir);
+
+    campo7.appendChild(botaoDetalhes);
+    campo7.appendChild(document.createTextNode(" "));
+    campo7.appendChild(botaoExcluir);
+    campo7.appendChild(document.createTextNode(" "));
+    campo7.appendChild(botaoAssumir);}
+
+function incluirTarefa() {
+
+    const tabelaDeTarefas = document.getElementById("dados-de-tarefas");
+    const nome = document.getElementById("nome_aluno");
+    const texto = document.getElementById("titulo");
+    const data = document.getElementById("data-solicitacao");
+
+
+    const novaTarefa= tabelaDeTarefas.insertRow(0);
+
+    const campo1 = novaTarefa.insertCell();
+    const campo2 = novaTarefa.insertCell();
+    const campo3 = novaTarefa.insertCell();
+    const campo4 = novaTarefa.insertCell();
+    const campo5 = novaTarefa.insertCell();
+    const campo6 = novaTarefa.insertCell();
+    const campo7 = novaTarefa.insertCell();
+
+
+    campo1.appendChild(document.createTextNode(texto.value));
+    campo2.appendChild(document.createTextNode(nome.value));
+    campo3.appendChild(document.createTextNode(data.value));
+    campo6.appendChild(document.createTextNode('Pendente'));
+
+    const iconeDoBotaoDetalhes = document.createElement('i');
+    iconeDoBotaoDetalhes.className = "material-icons";
+    iconeDoBotaoDetalhes.innerText = "remove_red_eye";
+    const botaoDetalhes = document.createElement('a');
     botaoDetalhes.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
     botaoDetalhes.setAttribute('data-delay', '50');
     botaoDetalhes.setAttribute('data-tooltip', 'Visualizar');
-    botaoDetalhes.appendChild(iconeDoBotaoExcluir);
+    botaoDetalhes.appendChild(iconeDoBotaoDetalhes);
+
+    const iconeDoBotaoExcluir = document.createElement('i');
+    iconeDoBotaoExcluir.className = "material-icons";
+    iconeDoBotaoExcluir.innerText = "delete";
+    const botaoExcluir = document.createElement('a');
+    botaoExcluir.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
+    botaoExcluir.setAttribute('data-delay', '50');
+    botaoExcluir.setAttribute('data-tooltip', 'Visualizar');
+    botaoExcluir.appendChild(iconeDoBotaoExcluir);
 
     const iconeDoBotaoAssumir = document.createElement('i');
-    iconeDoBotaoDetalhes.className = "material-icons prefix";
-    iconeDoBotaoDetalhes.innerText = "mail";
+    iconeDoBotaoAssumir.className = "material-icons";
+    iconeDoBotaoAssumir.innerText = "pan_tool";
     const botaoAssumir = document.createElement('a');
-    botaoDetalhes.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
-    botaoDetalhes.setAttribute('data-delay', '50');
-    botaoDetalhes.setAttribute('data-tooltip', 'Assumir tarefa');
-    botaoDetalhes.appendChild(iconeDoBotaoAssumir);
+    botaoAssumir.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
+    botaoAssumir.setAttribute('data-delay', '50');
+    botaoAssumir.setAttribute('data-tooltip', 'Assumir tarefa');
+    botaoAssumir.appendChild(iconeDoBotaoAssumir);
 
-    campo7.appendChild(botaoDetalhes, botaoExcluir, botaoAssumir);
-}
+    campo7.appendChild(botaoDetalhes);
+    campo7.appendChild(document.createTextNode(" "));
+    campo7.appendChild(botaoExcluir);
+    campo7.appendChild(document.createTextNode(" "));
+    campo7.appendChild(botaoAssumir);}
 
 function incluirAluno() {
 
-    let tabelaDeDiscentes = document.getElementById("dados-de-alunos");
-    let nome = document.getElementById("nome_completo");
-    let matricula = document.getElementById("matricula");
-    let curso = document.getElementById("curso");
-    let email = document.getElementById("email");
-    let telefone1 = document.getElementById("telefone1");
-    let telefone2 = document.getElementById("telefone2");
+    const tabelaDeDiscentes = document.getElementById("dados-de-alunos");
+    const nome = document.getElementById("nome_completo");
+    const matricula = document.getElementById("matricula");
+    const curso = document.getElementById("curso");
+    const email = document.getElementById("email");
+    const telefone1 = document.getElementById("telefone1");
+    const telefone2 = document.getElementById("telefone2");
 
-    let novoDiscente = tabelaDeDiscentes.insertRow(0);
+    const novoDiscente = tabelaDeDiscentes.insertRow(0);
 
-    let campo1 = novoDiscente.insertCell();
-    let campo2 = novoDiscente.insertCell();
-    let campo3 = novoDiscente.insertCell();
-    let campo4 = novoDiscente.insertCell();
-    let campo5 = novoDiscente.insertCell();
-    let campo6 = novoDiscente.insertCell();
-    let campo7 = novoDiscente.insertCell();
+    const campo1 = novoDiscente.insertCell();
+    const campo2 = novoDiscente.insertCell();
+    const campo3 = novoDiscente.insertCell();
+    const campo4 = novoDiscente.insertCell();
+    const campo5 = novoDiscente.insertCell();
+    const campo6 = novoDiscente.insertCell();
+    const campo7 = novoDiscente.insertCell();
 
     campo1.appendChild(document.createTextNode(nome.value));
     campo2.appendChild(document.createTextNode(matricula.value));
@@ -104,7 +163,7 @@ function incluirAluno() {
     campo6.appendChild(document.createTextNode(telefone2.value));
 
     const iconeDoBotaoDetalhes = document.createElement('i');
-    iconeDoBotaoDetalhes.className = "material-icons prefix";
+    iconeDoBotaoDetalhes.className = "material-icons";
     iconeDoBotaoDetalhes.innerText = "remove_red_eye";
     const botaoDetalhes = document.createElement('a');
     botaoDetalhes.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
@@ -113,8 +172,8 @@ function incluirAluno() {
     botaoDetalhes.appendChild(iconeDoBotaoDetalhes);
 
     const iconeDoBotaoEmail = document.createElement('i');
-    iconeDoBotaoDetalhes.className = "material-icons prefix";
-    iconeDoBotaoDetalhes.innerText = "mail";
+    iconeDoBotaoEmail.className = "material-icons";
+    iconeDoBotaoEmail.innerText = "mail";
     const botaoEmail = document.createElement('a');
     botaoEmail.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
     botaoEmail.setAttribute('data-delay', '50');
@@ -122,14 +181,18 @@ function incluirAluno() {
     botaoEmail.appendChild(iconeDoBotaoEmail);
 
     const iconeDoBotaoExcluir = document.createElement('i');
-    iconeDoBotaoDetalhes.className = "material-icons prefix";
-    iconeDoBotaoDetalhes.innerText = "delete";
+    iconeDoBotaoExcluir.className = "material-icons";
+    iconeDoBotaoExcluir.innerText = "delete";
     const botaoExcluir = document.createElement('a');
     botaoExcluir.className = "waves-effect waves-light btn pink accent-1 btn tooltipped";
     botaoExcluir.setAttribute('data-delay', '50');
     botaoExcluir.setAttribute('data-tooltip', 'Visualizar');
     botaoExcluir.appendChild(iconeDoBotaoExcluir);
 
-    campo7.appendChild(botaoDetalhes, botaoEmail, botaoExcluir);
+    campo7.appendChild(botaoDetalhes);
+    campo7.appendChild(document.createTextNode(" "));
+    campo7.appendChild(botaoEmail);
+    campo7.appendChild(document.createTextNode(" "));
+    campo7.appendChild(botaoExcluir);
 }
 
