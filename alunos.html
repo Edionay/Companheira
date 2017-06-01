@@ -62,7 +62,7 @@
         </div>
         <div class="divider"></div>
 
-        <table class="striped responsive-table" id="tabela-de-alunos">
+        <table class="striped responsive-table">
             <thead>
             <tr>
                 <th>Nome</th>
@@ -74,7 +74,7 @@
                 <th>Ações</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="dados-de-alunos">
             <tr>
                 <td>Edionay Aguiar</td>
                 <td>12345678</td>
@@ -83,15 +83,18 @@
                 <td>(55)99999999</td>
                 <td>(55)99999999</td>
                 <td>
-                    <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
-                       data-delay="50" data-tooltip="Visualizar" href="perfil/perfil1.html">
-                        <i class="material-icons">remove_red_eye</i></a>
-                    <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
-                       data-delay="50" data-tooltip="Enviar e-mail">
-                        <i class="material-icons">mail</i></a>
-                    <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
-                       data-delay="50" data-tooltip="Excluir">
-                        <i class="material-icons">delete</i></a>
+                    <div>
+
+                        <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
+                           data-delay="50" data-tooltip="Visualizar" href="perfil/perfil1.html">
+                            <i class="material-icons">remove_red_eye</i></a>
+                        <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
+                           data-delay="50" data-tooltip="Enviar e-mail">
+                            <i class="material-icons">mail</i></a>
+                        <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
+                           data-delay="50" data-tooltip="Excluir">
+                            <i class="material-icons">delete</i></a>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -160,6 +163,11 @@
                     <input id="curso" type="text" class="validate">
                     <label for="curso">Curso</label>
                 </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="text" class="validate">
+                    <label for="curso">E-mail</label>
+                </div>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">phone</i>
                     <input id="telefone1" type="tel" class="validate">
@@ -175,7 +183,8 @@
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat pink accent-1 white-text">Cadastrar</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat pink accent-1 white-text"
+        onclick="return incluirAluno()">Cadastrar</a>
     </div>
 </div>
 
