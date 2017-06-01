@@ -74,7 +74,7 @@
                 <th>Ações</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="dados-de-tarefas">
             <tr id="l01">
                 <td>Alfabetização Fônica Computadorizada</td>
                 <td>Tálita Serafim</td>
@@ -87,7 +87,7 @@
                        data-delay="50" data-tooltip="Visualizar">
                         <i class="material-icons">remove_red_eye</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
-                       data-delay="50" data-tooltip="Excluir">
+                       data-delay="50" data-tooltip="Excluir" onclick="return excluirTarefa('l01')">
                         <i class="material-icons">delete</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
                        data-delay="50" data-tooltip="Assumir tarefa">
@@ -106,7 +106,7 @@
                        data-delay="50" data-tooltip="Visualizar">
                         <i class="material-icons">remove_red_eye</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
-                       data-delay="50" data-tooltip="Excluir">
+                       data-delay="50" data-tooltip="Excluir" onclick="return excluirTarefa('l02')">
                         <i class="material-icons">delete</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
                        data-delay="50" data-tooltip="Assumir tarefa">
@@ -126,7 +126,7 @@
                         <i class="material-icons">remove_red_eye</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
                        data-delay="50" data-tooltip="Excluir">
-                        <i class="material-icons">delete</i></a>
+                        <i class="material-icons" onclick="return excluirTarefa('l03')">delete</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
                        data-delay="50" data-tooltip="Assumir tarefa">
                         <i class="material-icons">pan_tool</i></a>
@@ -144,7 +144,7 @@
                        data-delay="50" data-tooltip="Visualizar">
                         <i class="material-icons">remove_red_eye</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
-                       data-delay="50" data-tooltip="Excluir">
+                       data-delay="50" data-tooltip="Excluir"  onclick="return excluirTarefa('l04')">
                         <i class="material-icons">delete</i></a>
                     <a class="waves-effect waves-light btn pink accent-1 btn tooltipped" data-position="top"
                        data-delay="50" data-tooltip="Assumir tarefa">
@@ -160,7 +160,7 @@
     </div>
 </div>
 
-<!-- Modal de novo aluno -->
+<!-- Modal de nova tarefa -->
 <div id="modal-nova-tarefa" class="modal">
     <div class="modal-content">
         <h5>Nova tarefa</h5>
@@ -188,7 +188,8 @@
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat pink accent-1 white-text">Cadastrar</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat pink accent-1 white-text"
+        onclick="return incluirTarefa()">Cadastrar</a>
     </div>
 </div>
 
